@@ -1,0 +1,63 @@
+{% extends "application_insure/base.html" %}
+{% load static %}
+
+{% block content%}
+
+    <div class="container-fluid mt-5 text-center">
+        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3 mb-2 bg-light">
+            <div class="header"> Great to see you wish to contact us! </h5>
+        </div>
+        
+    </div>
+
+    <div class="main-container " style="padding:29px">
+            
+
+        <section id="contact">
+            <div class="container adjust-section">
+                <div class="col-12">
+                    <div class="row justify-content-center" style="padding:30px">
+                        <h1> Write Your Query Below</h1>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="field_form form_style3 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                                <form method="post" name="enq">
+                                    {% csrf_token %}
+                                <div class="row">
+                                    <div class="form-group col-12">
+                                        <input required="required" placeholder="Enter Name *" id="first-name" class="form-control" name="name" type="text">
+                                     </div>
+                                    <div class="form-group col-12">
+                                        <input required="required" placeholder="Enter Email *" id="email" class="form-control" name="email" type="email">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <input placeholder="Enter Subject" id="subject" class="form-control" name="subject" type="text">
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <textarea required="required" placeholder="Message *" id="description" class="form-control" name="message" rows="5"></textarea>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button type="submit" title="Submit Your Message!" class="btn btn-success" id="submitButton" name="submit" value="Submit">Submit</button>
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <div id="alert-msg" class="alert-msg text-center"></div>
+                                    </div>
+                                </div>
+                            </form>		
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3 mb-2 bg-light">
+            <div class="header"> This page is not working yet. Do not submit to avoid error </h5>
+        </div>
+
+
+    </div>
+
+
+{%endblock%}

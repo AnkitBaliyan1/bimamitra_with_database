@@ -1,0 +1,99 @@
+body {
+    background-color: #f8f8f8; /* Off white background - change as needed */
+    /* Or use a background image */
+    /* background-image: url('path/to/your/image.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* rest of your CSS styles remain unchanged */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+.header {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    color: #0044cc;
+}
+
+.special-text {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #ff0000;
+}
+
+.transparent-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.fully-transparent-container {
+    background-color: #ffffff;
+    opacity: 0.5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.openai-custom-container {
+    width: 300px;
+    height: auto;
+    background-color: #f8f8f8;
+    color: #333333;
+    border: 2px solid #f3f4f6;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.centered-container {
+    margin: 0 auto;
+    width: 66.66%;
+    background-color: #f8f8f8;
+    color: #333333;
+    border: 2px solid #0056b3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    text-align: center;
+    width: 100%;
+}
+
+.large-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-weight: light;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
