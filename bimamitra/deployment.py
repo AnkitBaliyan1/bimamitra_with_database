@@ -1,5 +1,5 @@
 import os
-from settings.py import *
+from settings import *
 from .settings import BASE_DIR
 
 
@@ -22,9 +22,9 @@ MIDDLEWARE = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(settings.BASE_DIR,'application_insure/static')
+STATIC_ROOT = os.path.join(BASE_DIR,'application_insure/static')
 
-connection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
+connection_string = os.getenv('AZURE_POSTGRESQL_CONNECTIONSTRING')
 parameters = {pair.split('='):pair.split('=')[1] for pair in connection_string.split(' ')}
 
 DATABASE = {
