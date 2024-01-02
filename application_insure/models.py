@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-'''
+
 # Class ContactUs creates a table for contact us page.
 
 class ContactUs(models.Model):
@@ -14,6 +14,3 @@ class ContactUs(models.Model):
 
     def __str__(self):
         return self.name
-
-
-'''
