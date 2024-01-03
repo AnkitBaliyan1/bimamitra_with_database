@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'bimamitra002'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_186FD48D44944818A1A6C8504CB3D763 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_58628553AF8942BBBA1FED5CCF20BA6E }}
