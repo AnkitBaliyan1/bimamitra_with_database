@@ -1,14 +1,18 @@
+/* Add custom styles for the fixed navigation bar */
+.navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000; /* Ensure it appears above other content */
+    
+}
+
 body {
     background-color: #f8f8f8; /* Off white background - change as needed */
     /* Or use a background image */
-    /* background-image: url('path/to/your/image.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-/* rest of your CSS styles remain unchanged */
-body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     color: #333333;
@@ -53,18 +57,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.centered-container {
-    margin: 0 auto;
-    width: 66.66%;
-    background-color: #f8f8f8;
-    color: #333333;
-    border: 2px solid #0056b3;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.container {
+
+.containers {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,3 +92,14 @@ input[type="text"], textarea {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* Apply this CSS class to your textarea widget */
+.autosize-textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    overflow-y: auto; /* Hide vertical scrollbar */
+    max-height: 80px; /* Set a maximum height if needed */
+    width: 90%; /* Adjust width as needed */
+    border-radius: 10px;
+    font-size: 20px;
+}
+

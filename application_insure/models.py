@@ -14,3 +14,13 @@ class ContactUs(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class SearchRecord(models.Model):
+    username = models.CharField(max_length=255, default='admin')
+    user_input = models.CharField(max_length=1255)
+    response = models.CharField(max_length=5000)
+    date_time = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.username} - {self.date_time}"

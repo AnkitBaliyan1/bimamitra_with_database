@@ -1,0 +1,78 @@
+{% extends "application_insure/base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'your_stylesheet.css' %}">
+    <title>Authentication Page | Sign In</title>
+</head>
+<body>
+    <div class="container-fluid mt-5 text-center">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3 mb-2 bg-light">
+                    <h5 class="header">Welcome to the BimaMitra WebApp.</h5>
+                </div>
+                <div class="centered-container">
+                    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3 mb-2 bg-light">
+                        <h5 class="header">Sign up here!!</h5>
+                    </div>
+
+                    <form action="/signup/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Create a username (only letters and numbers) *" required>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <input type="text" id="fname" name="fname" class="form-control" placeholder="Enter Your First Name *" required>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <input type="text" id="lname" name="lname" class="form-control" placeholder="Enter Your Last Name">
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Your Email Address *" required>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Your Phone Number *" required>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <input type="password" id="pass1" name="pass1" class="form-control" placeholder="Enter Password" required>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <input type="password" id="pass2" name="pass2" class="form-control" placeholder="Re-Enter Password" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+
+                    
+                </div>
+
+                <div class="container" style="border: none;">
+                    Already Registered ? Click here to-
+                    <a href="/signin">Sign In</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

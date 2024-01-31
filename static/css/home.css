@@ -1,0 +1,112 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    /* You can add more styling here such as padding or a specific height/width if needed */
+}
+
+.image-container img {
+    max-width: 102%; /* Ensures the image is responsive */
+    height: auto;   /* Maintains the aspect ratio of the image */
+    /* Add more styling as needed, such as a border, etc. */
+}
+
+.light-grey-container {
+    background-color: #f5f5f5; /* Light grey background color */
+    border: 2px solid #ccc; /* Light grey border color */
+    border-radius: 10px; /* Border radius for rounded corners */
+    padding: 20px; /* Padding inside the container */
+}
+
+.container-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    border: 2px solid rgb(248, 246, 246);
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 40px;
+    color:purple;
+}
+
+.feature-list {
+    background-color: #f5f5f5;
+    padding: 20px;
+    
+    border-radius: 15px;
+    margin: 20px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Style the list items */
+.feature-list ul {
+    list-style-type: none; /* Use bullet points for list items */
+    padding-left: 0;
+}
+
+.feature-list li {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Highlight on hover */
+.feature-list li:hover {
+    color: #4aa9e5; /* Change the text color on hover */
+    border-radius: 15px;
+}
+
+
+.branding-text {
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #58bd69; /* Background color for emphasis */
+    
+    /* Border styles */
+    /* border: 2px solid #333; /* Border width and color */
+    border-radius: 30px; /* Border radius */
+    padding: 10px; /* Add padding to create space around the text and the border */
+}
+
+
+
+/* Style the "Why Bima Mitra?" text */
+.why-bima-mitra {
+    font-size: 25px;
+    text-align: justify;
+    margin: 20px 0;
+    color: #333;
+}
+
+
+/* Style the highlighted heading */
+.highlight-heading {
+    background-color: #b8b5b5; /* Light grey background color */
+    border: none solid #b9a2a2; /* Black border color */
+    border-radius: 30px; /* Border radius for rounded corners */
+    padding: 10px 20px; /* Padding inside the heading */
+    font-size: 24px; /* Font size for the heading */
+    color: #000; /* Text color */
+    text-align: center; /* Center-align the text */
+    margin: 20px;
+}
+
+
+.end-of-page-message {
+    background-color: #ffcc00; /* Background color for emphasis */
+    color: #333; /* Text color */
+    font-size: 28px; /* Larger font size for emphasis */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center-align the text */
+    padding: 20px; /* Padding to make it visually clear */
+    margin: 20px;
+    border-radius: 30px;
+}

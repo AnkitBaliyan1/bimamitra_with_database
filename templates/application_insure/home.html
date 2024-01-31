@@ -1,0 +1,82 @@
+{% extends "application_insure/base.html" %}
+{% load static %}
+
+{% block content%}
+
+    <div class="container-fluid text-center" style="margin-top=0px">
+        
+
+        <body>
+            <div class="image-container md-5">
+                <img src="{% static 'images/home/home_image.png' %}" alt="Your Image Description">
+            </div>
+
+
+            <div class="header" style="font-size: 45px;"> 
+                Bima Mitra: Navigating Insurance with Intelligence
+            </div>
+
+            <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3 mb-2 bg-light mt-2" style="color: black; font-size: 20px;">
+                Welcome to Bima Mitra, your digital ally in the complex world of insurance. <br>
+                With our advanced AI-driven tools and in-depth analytics, we bring clarity and simplicity to insurance processes. <br>
+                Whether you're an individual seeking insurance advice or a professional looking for underwriting assistance, <br>
+                <strong>Bima Mitra </strong> is your go-to InsureTech solution.
+            </div>
+
+            <!-- Features: -->
+            <div class="light-grey-container">
+                <div class="container-section">
+                    Features at a Glance:
+                </div>
+                <div class="feature-list">
+                    <ul>
+                        <li>Interactive Q&A with effortless navigation</li>
+                        <li>Comprehensive Insurance Information Repository</li>
+                        <li>Streamlined Underwriting Assistant</li>
+                        <li>Simplified Claim Processing Assistance</li>
+                        <li>In-depth Data Analytics Support</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="branding-text">
+                Engage with Bima Mitra, <br> where technology meets insurance expertise
+            </div>
+
+
+
+            <!-- Why Bima Mitra -->
+            <div class="light-grey-container">
+                <div class="container-section">
+                    Why Bima Mitra ?
+                </div>
+                <div class="why-bima-mitra">
+                    Bima Mitra is the catalyst for swift digitization in the insurance sector, offering intuitive, API-driven connectivity for insurers and clients. It's the nexus where InsureTech innovation meets practical application, enabling seamless integration and deployment of digital insurance services at remarkable speed. Choose Bima Mitra to empower, enhance, and expedite your insurance experience
+                </div>
+        </div>
+
+
+
+            <div class="highlight-heading">
+                Bima Mitra is a complete Platform As A Service (PAAS) across products, <br> APIs and data essential to drive business growth
+            </div>
+
+
+
+            <div class="end-of-page-message">
+                A whole new way to think about insurance infrastructure
+            </div>
+            
+        </body>
+        
+    </div>
+
+
+{%endblock%}
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3 mb-2 bg-light">
+    <div class="header"> Welcome to the homepage of this WebApp - with database. </h5>
+</div>
+
+<a href="{% url 'bimamitra:bimabot' %}">Link to the App</a>

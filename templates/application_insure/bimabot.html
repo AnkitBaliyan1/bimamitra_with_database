@@ -1,0 +1,137 @@
+{% extends "application_insure/base.html" %}
+{% load static %}
+
+{% block secondary_title %} Application {% endblock %}
+
+{% block content%}
+
+
+
+<head>
+    <!-- ... (head content) ... -->
+</head>
+    
+    <body>
+        
+        <div class="container-fluid mt-2 text-center" style="margin-top: 65px;">
+            <div class="row-12">
+            <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3 mb-2 bg-light">
+                <div class="header"> Welcome to the BimaMitra WebApp.</h5>
+                    
+            </div>
+        </div>
+        <div class="centered-container centered-container-content" >
+            <div class="center-box">
+                <div class="image-box">
+                    <img src="{% static 'images/logo/title.jpeg' %}" alt="Image" class="box-image">
+                </div>
+            </div>
+                
+            <div class="form-container mt-5">
+                <form method="POST" id="chat-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Get Response</button>
+                </form>
+            </div>
+
+            <div class="disclaimer">
+                <p>
+                    * This website is for informational purposes only. 
+                </p>
+            </div>
+            
+
+                
+        </div>
+
+        {% if response %}
+            <div class="container-response">
+                <div id="response" class="response-container">
+                    <!-- <p><strong>BimaMitra says:</strong> {{ response | safe }}</p> -->
+                    
+                </div>
+            </div>
+        {% endif %}
+
+
+        {% if chat_history %}
+            <div class="container-history">
+                {% for message in chat_history %}
+                {% if 'BimaBot' in message %}
+                <div class="bot-message">
+                    <p>
+                        <img src="{% static 'images/logo/icon.png' %}" alt="Logo" width="30">
+                        {{ message.BimaBot | safe }} 
+                    </p>
+
+                </div>
+                {% endif %}
+                {% if 'You' in message %}
+                <div class="user-message">
+                    <p><strong>You:</strong> {{ message.You }}</p>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+       
+    </body>
+    
+
+{%endblock%}
+
+
+<!-- creating chat history view ====== left right alternate message
+                <div class="main-container border border-black" style="width: auto; padding: 15px;">
+                    <h2>Chat History</h2>
+                    {% for message in chat_history %}
+                        <div class="container border border-white" style = " width: 80%; margin-bottom: 5px;">
+
+                            {% if 'BimaBot' in message %}
+                                <div class="container border border-white text-left bg-light p-1">
+                                    <div class="d-inline-block border border-dark rounded p-1">
+                                        <p><strong>BimaBot:</strong> {{ message.BimaBot }}</p>
+                                        
+                                    </div>
+                                </div>
+                            {% endif %}
+                            
+                            {% if 'You' in message %}
+                                <div class="container border border-white text-left bg-light p-2">
+                                    <p><strong>You:</strong> {{ message.You }}</p>
+                                    
+                                </div>
+                            {% endif %}
+                        </div>
+                        </div>
+                    {% endfor %}
+                    
+                    -->
+
+                    <!-- message in just one below another -->
+        {% if chat_history %}
+        <div class="container-history">
+            <h4></h4>
+            {% for message in chat_history %}
+                {% if 'BimaBot' in message %}
+                    <div class="bot-container">
+                        <div class="text-left bg-light p-1">
+                            <div class="d-inline-block border border-dark rounded p-1">
+                                <p><strong>BimaBot:</strong> {{ message.BimaBot }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+        
+                {% if 'You' in message %}
+                    <div class="user-container">
+                        <div class="text-left bg-light p-2">
+                            <p><strong>You:</strong> {{ message.You }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}

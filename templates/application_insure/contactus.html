@@ -1,6 +1,8 @@
 {% extends "application_insure/base.html" %}
 {% load static %}
 
+{% block secondary_title %} Contact Us {% endblock %}
+
 {% block content%}
 
     <div class="container-fluid mt-5 text-center">
@@ -11,13 +13,11 @@
     </div>
 
     <div class="main-container " style="padding:29px">
-            
-
         <section id="contact">
             <div class="container adjust-section">
                 <div class="col-12">
                     <div class="row justify-content-center" style="padding:30px">
-                        <h1> Write Your Query Below</h1>
+                        <h5> Write Your Query Below</h5>
                     </div>
 
                     <div class="row justify-content-center">
@@ -52,12 +52,12 @@
             </div>
         </section>
 
-        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded p-3 mb-2 bg-light">
-            <div class="header"> This page is not working yet. Do not submit to avoid error </h5>
-        </div>
+        
 
 
     </div>
+    
 
+{% endblock %}
 
-{%endblock%}
+    

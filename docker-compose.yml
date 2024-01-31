@@ -20,3 +20,4 @@ services:
     container_name: bimamitra_postgre_database
     ports:
       - 5432:5432
+      
