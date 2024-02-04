@@ -57,3 +57,4 @@ pinecone-client
 pypdf
 openai
 huggingface_hub
+markdown
