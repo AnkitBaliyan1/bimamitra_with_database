@@ -6,7 +6,8 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    if os.environ.get("DEPLOYMENT_FLAG"==1):
+    print("Deployment flag status: ",os.environ.get("DEPLOYMENT_FLAG"))
+    if os.environ.get("DEPLOYMENT_FLAG")==1:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bimamitra.deployment')
     else:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bimamitra.settings')
