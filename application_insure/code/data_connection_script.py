@@ -29,7 +29,7 @@ def split_docs(documents, chunk_size=500, chunk_overlap=50):
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-print("base_dir:",BASE_DIR)
+print("base_dir in data_connection_script:",BASE_DIR)
 
 def get_similar_doc(query, k=2):
 
