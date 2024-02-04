@@ -7,9 +7,9 @@ import sys
 def main():
     """Run administrative tasks."""
     if os.environ.get("DEPLOYMENT_FLAG"==1):
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bimamitra.settings')
-    else:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bimamitra.deployment')
+    else:
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bimamitra.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
