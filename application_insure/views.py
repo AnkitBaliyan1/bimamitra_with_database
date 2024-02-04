@@ -118,7 +118,7 @@ def generate_response_rag(user_input):
 def bimabot_rag(request):
     chat_history = []
     response_text = None
-    user='admin_rag'
+    user='demo_1'
     
     if request.method == "POST":
         form = InputForm(request.POST)

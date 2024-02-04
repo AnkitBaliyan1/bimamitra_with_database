@@ -95,5 +95,4 @@ def main_fun(query,k=3):
     print("\nAnswer is: ", final_answer)
     return final_answer
 
-#main_fun(query="What is Mediclaim Policy?")
-
+#main_fun(query="What is the difference between group medical coverage and Mediclaim Policy?")
